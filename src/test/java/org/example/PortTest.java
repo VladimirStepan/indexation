@@ -25,6 +25,8 @@ class PortTest {
         expected.add(2, Arrays.asList(3,4));
         assertNotNull(actual);
         assertEquals(expected, actual);
+        System.out.println("Преобразованная последовательность чисел: " + actual);
+        actual.stream().flatMap(List::stream).forEach(System.out::print);
     }
 
     @Test
@@ -47,6 +49,7 @@ class PortTest {
         expected.add(3, Arrays.asList(5,2));
         assertNotNull(actual);
         assertEquals(expected, actual);
+        System.out.println("\nВсевозможные уникальные упорядоченные группы элементов: " + actual);
     }
 
     @Test
